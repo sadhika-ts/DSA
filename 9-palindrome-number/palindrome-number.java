@@ -11,24 +11,31 @@ class Solution {
         int right=c.length-1;
         while(left<right)
         {
-            char temp=c[left];
-            c[left]=c[right];
-            c[right]=temp;
+            if(c[left]!=c[right])
+            return false;
             left++;
             right--;
-
-        }        
-        int y=0;
-
-        for(int i=0;i<c.length;i++)
-        {
-            int j=c[i]-'0';
-            y=y*10+j;
         }
-        if(x==y)
-        return true;
+        // while(left<right)
+        // {
+        //     char temp=c[left];
+        //     c[left]=c[right];
+        //     c[right]=temp;
+        //     left++;
+        //     right--;
 
-        return false;
+        // }        
+        // int y=0;
+
+        // for(int i=0;i<c.length;i++)
+        // {
+        //     int j=c[i]-'0';
+        //     y=y*10+j;
+        // }
+        // if(x==y)
+        // return true;
+
+        return true;
         
         
     }
