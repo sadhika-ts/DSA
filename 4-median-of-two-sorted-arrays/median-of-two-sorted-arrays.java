@@ -33,21 +33,18 @@ class Solution {
         list.add(nums2[j]);
         j++;
        }
-        for(int l=0;l<list.size();l++)
-        System.out.println(list.get(l));
+        
 
         
         int index=list.size()/2;
         if(list.size()%2==0)
         {
-            k=list.get(index-1)+list.get(index);
-            System.out.println(k);
+            k=list.get(index-1)+list.get(index);            
             return k/2;
         }
         else
         {
             k=list.get(index);
-            System.out.println(k);
             return k;
         }
 
