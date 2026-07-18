@@ -10,9 +10,9 @@ class Solution {
             
             for(int i=0;i<s.length();i++)
             {
-                int ascii=(int)s.charAt(i);
-                arr[ascii-97]+=1;
-                System.out.println(ascii);
+                // int ascii=(int)s.charAt(i);
+                arr[(int)s.charAt(i)-97]+=1;
+                
             }
             for(int i=0;i<t.length();i++)
             {
