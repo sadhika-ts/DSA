@@ -11,13 +11,13 @@ class Solution {
             for(int i=0;i<s.length();i++)
             {
                 // int ascii=(int)s.charAt(i);
-                arr[(int)s.charAt(i)-97]+=1;
+                arr[(s.charAt(i)+0)-97]+=1;
                 
             }
             for(int i=0;i<t.length();i++)
             {
                 
-                arr[(int)t.charAt(i)-97]-=1;
+                arr[(t.charAt(i)+0)-97]-=1;
 
             }
 
