@@ -16,8 +16,8 @@ class Solution {
             }
             for(int i=0;i<t.length();i++)
             {
-                int ascii=(int)t.charAt(i);
-                arr[ascii-97]-=1;
+                
+                arr[(int)t.charAt(i)-97]-=1;
 
             }
 
