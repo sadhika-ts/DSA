@@ -1,7 +1,7 @@
 class Solution {
     public boolean isAnagram(String s, String t) {
-         boolean bool=true;
-         int a=97;
+         
+         
 
          int[] arr=new int[26];
          if(s.length()!=t.length()) return false;
@@ -11,13 +11,13 @@ class Solution {
             for(int i=0;i<s.length();i++)
             {
                 int ascii=(int)s.charAt(i);
-                arr[ascii-a]+=1;
+                arr[ascii-97]+=1;
                 System.out.println(ascii);
             }
             for(int i=0;i<t.length();i++)
             {
                 int ascii=(int)t.charAt(i);
-                arr[ascii-a]-=1;
+                arr[ascii-97]-=1;
 
             }
 
@@ -25,8 +25,8 @@ class Solution {
             {
                 if(arr[i]!=0)
                 {
-                    bool=false;
-                    break;
+                    return false;
+                    
                 }
                 
             }
@@ -62,7 +62,7 @@ class Solution {
             
             
     //     }
-        return bool;
+        return true;
         
     }
 }
