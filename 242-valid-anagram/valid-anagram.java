@@ -21,7 +21,7 @@ class Solution {
 
             }
 
-            for(int i=0;i<arr.length;i++)
+            for(int i=0;i<26;i++)
             {
                 if(arr[i]!=0)
                 {
