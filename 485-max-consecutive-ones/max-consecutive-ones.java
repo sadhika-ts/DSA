@@ -3,7 +3,8 @@ class Solution {
      {
         int max=0;
         int one=1;
-        ArrayList<Integer> Max=new ArrayList<>();
+        
+        int maxsum=0;
 
         for(int i=0;i<nums.length;i++)
         {
@@ -13,13 +14,15 @@ class Solution {
             }
             else
             {
-                Max.add(max);
+                
+                maxsum=Math.max(maxsum,max);
                 
                 max=0;
             }
-            Max.add(max);
+            
+            maxsum=Math.max(maxsum,max);
         }
-        max=Collections.max(Max);
-         return max;
+        
+         return maxsum;
     }
 }
