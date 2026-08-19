@@ -1,39 +1,34 @@
-import java.util.*;
-
-class Solution
-{
-	
-    public static String reverseVowels(String s) 
-    {
-        int left=0;
-        char c[]=new char[s.length()];
-        int right=c.length-1;
-        for(int i=0;i<s.length();i++)
+class Solution {
+    public String reverseVowels(String s) {
+         
+        char[] arr=s.toCharArray();
+        int i=0;
+        int j=s.length()-1;
+        for(int k=0;k<arr.length;k++)
         {
-            c[i]=s.charAt(i);
-        }
-        while(left<right)
+            System.out.println(arr[k]);
+        }        
+        while(i<j)
         {
-            if((c[left]=='a' || c[left]=='A'||c[left]=='e' || c[left]=='E'||c[left]=='i' || c[left]=='I'||c[left]=='o' || c[left]=='O'||c[left]=='u'|| c[left]=='U')&&(c[right]=='A'||c[right]=='a'||c[right]=='E'||c[right]=='e'||c[right]=='I'||c[right]=='i'||c[right]=='O'||c[right]=='o'||c[right]=='U'||c[right]=='u'))
+            if(arr[i]!='a' && arr[i]!='e' && arr[i]!='i' && arr[i]!='o' && arr[i]!='u' && arr[i]!='A' && 
+            arr[i]!='I' && arr[i]!='E' && arr[i]!='O' && arr[i]!='U')
             {
-                char temp=c[left];
-                c[left]=c[right];
-                c[right]=temp;
-                
-				
-            left++;
-            right--;
+                i++;
             }
-			else if((c[left]!='A'||c[left]!='a'||c[left]!='E'||c[left]!='e'||c[left]!='I'||c[left]!='i'||c[left]!='O'||c[left]!='o'||c[left]!='U'||c[left]!='u')&&(c[right]=='A'||c[right]=='a'||c[right]=='E'||c[right]=='e'||c[right]=='I'||c[right]=='i'||c[right]=='O'||c[right]=='o'||c[right]=='U'||c[right]=='u'))
-			{
-				left++;
-			}
-			else
-			{
-				right--;
-			}
+            else if(arr[j]!='a' && arr[j]!='e' && arr[j]!='i' && arr[j]!='o' && arr[j]!='u' && arr[j]!='A' && arr[j]!='I' && arr[j]!='E' && arr[j]!='O' && arr[j]!='U')
+            {
+                j--;
+            }
+            else
+            {
+                char temp=arr[i];
+                arr[i]=arr[j];
+                arr[j]=temp;
+                i++;
+                j--;
+            }
+            
         }
-        String str=String.valueOf(c);
-         return str;
+        return String.valueOf(arr);
     }
 }
