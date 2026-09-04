@@ -16,7 +16,7 @@ class Solution {
             
             while(prod>=k)
             {
-                prod/=nums[left];
+                prod=prod/nums[left];
                 left++;              
             }
 
