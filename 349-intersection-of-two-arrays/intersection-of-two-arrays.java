@@ -21,7 +21,7 @@ class Solution {
             if(nums1[j]!=nums1[j-1])
             {
                 num1.add(nums1[j]);
-                System.out.println(nums1[j]);
+                
             }
             
         }
@@ -32,7 +32,7 @@ class Solution {
             if(nums2[j]!=nums2[j-1])
             {
                 num2.add(nums2[j]);
-                System.out.println(nums2[j]);
+                
             }
             
         }
