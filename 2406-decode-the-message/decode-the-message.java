@@ -16,7 +16,6 @@ class Solution {
                     if(!map.containsKey((key.charAt(j))))
                     {
                         map.put(key.charAt(j),c);
-                        System.out.println(key.charAt(j)+" "+c);
                         ascii++;
                     }
                 }                
