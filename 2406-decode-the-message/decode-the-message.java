@@ -4,23 +4,25 @@ class Solution {
         HashMap<Character,Character> map=new HashMap<>();
         StringBuilder sb=new StringBuilder();
 
-        String[] str=key.split(" ");
+        
         int ascii=97;
 
-        for(int i=0;i<str.length;i++)
-        {
-            for(int j=0;j<str[i].length();j++)
+       
+            for(int j=0;j<key.length();j++)
             {
-                char c=(char)ascii;
-                if(!map.containsKey((str[i].charAt(j))))
+                if(key.charAt(j)!=' ')
                 {
-                    map.put(str[i].charAt(j),c);
-                    System.out.println(str[i].charAt(j)+" "+c);
-                    ascii++;
-                }
+                    char c=(char)ascii;
+                    if(!map.containsKey((key.charAt(j))))
+                    {
+                        map.put(key.charAt(j),c);
+                        System.out.println(key.charAt(j)+" "+c);
+                        ascii++;
+                    }
+                }                
                 
             }
-        }
+        
 
         for(int i=0;i<message.length();i++)
         {
