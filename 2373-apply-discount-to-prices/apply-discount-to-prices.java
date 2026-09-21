@@ -25,7 +25,6 @@ class Solution {
                 }
                 double d=n*discount/100;
                 double fl=n-d;
-                System.out.println(fl);
                 
                 str[i]="$"+String.format("%.2f", fl);
 
