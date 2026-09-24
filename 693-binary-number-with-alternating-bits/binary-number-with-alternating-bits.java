@@ -19,16 +19,12 @@ class Solution {
         {
             if(bool.get(left)!=bool.get(right))
             {
-               
-                  left=right;
-                  right++;
+               left=right;
+               right++;
                
             }
             else
             {
-                System.out.println(bool.get(left));
-                System.out.println(bool.get(right));
-                System.out.println(b);
                b=false;
                 return b;
 
