@@ -13,11 +13,7 @@ class Solution {
             else if(count==0 && s.charAt(i)==')')
             ans++;                
             else
-            {
-                if(s.charAt(i)==')')
-                count--;
-                
-            }
+            count--;
             
         }
         return count+ans;
